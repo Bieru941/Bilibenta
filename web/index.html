@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="BiliBenta - Buy Smart, Sell Fast">
+  <title>BiliBenta — Buy Smart, Sell Fast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Bili<span>Benta</span></div>
+  <nav>
+    <a href="#home">Home</a><a href="#browse">Browse</a><a href="#sell">Sell</a>
+    <button class="login" onclick="openLogin()">Login</button>
+  </nav>
+</header>
+<main>
+<section id="home" class="hero">
+  <div><div class="pill">🇵🇭 Local Filipino Marketplace</div>
+  <h1>Buy Smart.<br><span>Sell Fast.</span></h1>
+  <p>Find great deals from people near you, or turn your unused items into cash.</p>
+  <div class="actions"><a class="primary" href="#browse">Browse Listings</a><a class="secondary" href="#sell">Sell an Item</a></div>
+  </div>
+  <div class="hero-card"><div class="card-icon">🛍️</div><h3>Safe & Simple</h3><p>Discover products, contact sellers and manage your listings in one place.</p></div>
+</section>
+<section id="browse" class="section">
+  <div class="section-head"><div><h2>Featured Listings</h2><p>Sample listings for the web preview.</p></div>
+  <input id="search" oninput="filterProducts()" placeholder="Search products..."></div>
+  <div id="products" class="grid"></div>
+</section>
+<section id="sell" class="sell section">
+  <div><h2>Ready to sell?</h2><p>Create a listing and reach buyers in your community.</p></div>
+  <button class="primary" onclick="openSell()">Create Listing</button>
+</section>
+</main>
+<footer>BiliBenta © 2026 · Buy Smart, Sell Fast</footer>
+
+<div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<script src="app.js"></script>
+</body>
+</html>
